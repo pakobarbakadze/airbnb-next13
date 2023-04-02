@@ -1,3 +1,4 @@
+import Modal from "./components/Modals/Modal";
 import Navbar from "./components/Navbar/Navbar";
 import "./globals.css";
 
@@ -16,6 +17,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
       <body className={font.className}>
+        <Modal/>
         <Navbar />
         {children}
       </body>
