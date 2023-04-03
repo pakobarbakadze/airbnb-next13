@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar/Navbar";
 import "./globals.css";
 
 import { Nunito } from "next/font/google";
+import ToasterProvider from "./providers/ToasterProvider";
 
 export const metadata = {
   title: "Airbnb",
@@ -17,7 +18,8 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
       <body className={font.className}>
-        <RegisterModal/>
+        <ToasterProvider />
+        <RegisterModal />
         <Navbar />
         {children}
       </body>
